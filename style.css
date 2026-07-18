@@ -1,0 +1,797 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    overflow:auto;
+
+    font-family:"Yu Gothic",sans-serif;
+
+    color:white;
+
+    background:#050505;
+
+}
+
+
+.home-background{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+position:relative;
+overflow:hidden;
+
+
+background:
+
+radial-gradient(
+circle at center,
+#222,
+#050505 70%
+);
+
+
+}
+
+
+/* 六角形っぽい薄い模様 */
+
+.home-background::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+
+background-image:
+
+linear-gradient(
+30deg,
+rgba(255,255,255,.05) 12%,
+transparent 12.5%
+),
+
+linear-gradient(
+150deg,
+rgba(255,255,255,.05) 12%,
+transparent 12.5%
+);
+
+
+background-size:80px 140px;
+
+opacity:.5;
+
+
+}
+
+
+
+/* タイトル */
+
+.title-box{
+
+position:relative;
+
+text-align:center;
+
+z-index:2;
+
+}
+
+
+
+h1{
+
+font-size:90px;
+
+letter-spacing:15px;
+
+font-weight:700;
+
+
+text-shadow:
+
+0 0 20px rgba(255,255,255,.4);
+
+}
+
+
+
+p{
+
+margin-top:20px;
+
+font-size:22px;
+
+letter-spacing:5px;
+
+}
+
+
+
+
+button{
+
+margin-top:60px;
+
+
+width:240px;
+
+height:80px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#050505 50%,
+#900000 50%
+);
+
+
+border:
+
+2px solid white;
+
+
+color:white;
+
+
+font-size:22px;
+
+letter-spacing:5px;
+
+
+cursor:pointer;
+
+
+transition:.4s;
+
+
+}
+
+
+
+button:hover{
+
+
+transform:scale(1.08);
+
+
+}
+
+/* ホーム画面 */
+
+.home-page{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+radial-gradient(
+circle at center,
+#222,
+#050505 75%
+);
+
+}
+
+
+.home-page::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(
+30deg,
+rgba(255,255,255,.04) 12%,
+transparent 12.5%
+),
+
+linear-gradient(
+150deg,
+rgba(255,255,255,.04) 12%,
+transparent 12.5%
+);
+
+background-size:80px 140px;
+
+opacity:.5;
+
+}
+
+
+.home-page h1{
+
+font-size:70px;
+
+opacity:0;
+
+animation:fadeUp .8s ease forwards;
+
+}
+
+
+
+.menu{
+
+display:flex;
+
+gap:50px;
+
+margin-top:60px;
+
+}
+
+
+
+.menu div{
+
+border:1px solid white;
+
+padding:20px 40px;
+
+letter-spacing:3px;
+
+
+transition:.3s;
+
+
+}
+
+
+.menu div:hover{
+
+background:white;
+
+color:black;
+
+
+}
+
+/* ホームメニュー */
+
+.menu{
+
+display:flex;
+
+flex-direction:column;
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+
+.menu a{
+
+    opacity:0;
+
+    animation:fadeUp .8s ease forwards;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:32px;
+
+    letter-spacing:8px;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.menu a:nth-child(1){
+
+    animation-delay:.6s;
+
+}
+
+.menu a:nth-child(2){
+
+    animation-delay:.8s;
+
+}
+
+.menu a:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+color:white
+
+text-decoration:none
+
+font-size
+
+letter-spacing
+
+position:relative
+
+transition
+
+
+.menu a::before,
+.menu a::after{
+
+content:"";
+
+position:absolute;
+
+top:50%;
+
+width:0;
+
+height:1px;
+
+background:white;
+
+transition:.3s;
+
+}
+
+
+.menu a:hover{
+
+transform:scale(1.15);
+
+opacity:.7;
+
+}
+
+/* STORYページ */
+
+
+.story-page{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+background:
+
+radial-gradient(
+circle at center,
+#1a1a1a,
+#050505 75%
+);
+
+
+color:white;
+
+}
+
+
+
+.story-box{
+
+width:700px;
+
+text-align:center;
+
+padding:50px;
+
+
+border-left:1px solid rgba(255,255,255,.3);
+
+border-right:1px solid rgba(255,255,255,.3);
+
+
+}
+
+
+
+.story-box h1{
+
+font-size:70px;
+
+letter-spacing:15px;
+
+}
+
+
+
+.line{
+
+width:80px;
+
+height:1px;
+
+background:white;
+
+margin:30px auto;
+
+}
+
+
+
+.story-box p{
+
+font-size:18px;
+
+line-height:2.5;
+
+letter-spacing:3px;
+
+margin-top:30px;
+
+}
+
+
+
+.story-box a{
+
+display:inline-block;
+
+margin-top:60px;
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:5px;
+
+transition:.3s;
+
+}
+
+
+
+.story-box a:hover{
+
+opacity:.5;
+
+letter-spacing:8px;
+
+}
+
+/* CONCEPTページ */
+
+
+.concept-page{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+background:
+
+linear-gradient(
+135deg,
+#050505,
+#151515
+);
+
+
+color:white;
+
+}
+
+
+
+.concept-box{
+
+width:700px;
+
+text-align:center;
+
+padding:50px;
+
+
+border-top:1px solid rgba(255,255,255,.3);
+
+border-bottom:1px solid rgba(255,255,255,.3);
+
+}
+
+
+
+.concept-box h1{
+
+font-size:70px;
+
+letter-spacing:15px;
+
+}
+
+
+
+.concept-box p{
+
+font-size:18px;
+
+line-height:2.8;
+
+letter-spacing:4px;
+
+margin-top:35px;
+
+}
+
+
+
+.concept-box a{
+
+display:inline-block;
+
+margin-top:60px;
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:5px;
+
+transition:.3s;
+
+}
+
+
+
+.concept-box a:hover{
+
+opacity:.5;
+
+}
+
+/* WORLDページ */
+
+.world-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-start;
+
+
+background:
+
+radial-gradient(
+circle at center,
+#222,
+#050505 75%
+);
+
+
+color:white;
+
+padding-top:60px;
+
+padding-bottom:80px;
+
+}
+
+
+.world-box{
+
+width:750px;
+
+text-align:center;
+
+padding:50px;
+
+padding-bottom:100px;
+
+}
+
+
+.world-box h1{
+
+font-size:70px;
+
+letter-spacing:15px;
+
+}
+
+
+
+.world-box h2{
+
+margin-top:50px;
+
+font-size:20px;
+
+letter-spacing:8px;
+
+}
+
+
+
+.world-box p{
+
+font-size:16px;
+
+line-height:2.5;
+
+letter-spacing:3px;
+
+}
+
+
+
+.world-box a{
+
+display:inline-block;
+
+margin-top:60px;
+
+color:white;
+
+text-decoration:none;
+
+letter-spacing:5px;
+
+transition:.3s;
+
+}
+
+
+.world-box a:hover{
+
+opacity:.5;
+
+}
+
+.archive-text{
+
+margin-top:60px;
+
+font-size:16px;
+
+letter-spacing:6px;
+
+color:rgba(255,255,255,.45);
+
+}
+
+/* フェードインアニメーション */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.subtitle{
+
+opacity:0;
+
+animation:fadeUp .8s ease forwards;
+
+animation-delay:.3s;
+
+}
+
+.archive-text{
+
+opacity:0;
+
+animation:fadeUp .8s ease forwards;
+
+animation-delay:1.2s;
+
+}
+
+.menu a::before{
+
+right:100%;
+
+margin-right:15px;
+
+}
+
+.menu a::after{
+
+left:100%;
+
+margin-left:15px;
+
+}
+
+.menu a:hover::before,
+.menu a:hover::after{
+
+width:40px;
+
+}
+
+/* ロゴ */
+
+.site-logo{
+
+    position:fixed;
+
+    top:25px;
+
+    left:35px;
+
+    z-index:999;
+
+}
+
+.site-logo a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:24px;
+
+    letter-spacing:4px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.site-logo a:hover{
+
+    opacity:.6;
+
+}
+
+/* メニュー文字のホバー演出 */
